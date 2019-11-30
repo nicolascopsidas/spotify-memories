@@ -17,6 +17,7 @@ app.set('view engine', 'ejs');
 //mangodb nosql database set up with mangoose
 mongoose.set('useNewUrlParser', true)
 mongoose.set('useUnifiedTopology', true)
+// change the URL of mongo database to yours
 mongoose.connect('mongodb://localhost:27017/MyDatabase')
 var db = mongoose.connection
 const Schema = mongoose.Schema;
