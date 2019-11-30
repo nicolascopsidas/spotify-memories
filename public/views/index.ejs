@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/css/flexslider.css">
+    <link rel="stylesheet" href="../public/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../public/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../public/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../public/css/icofont.css">
+    <link rel="stylesheet" href="../public/css/jquery-ui.css">
+    <link rel="stylesheet" href="../public/css/jQuery.verticalCarousel.css">
+    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="../public/responsive.css">
+</head>
+
+<body class="loading">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-3 col-xs-12">
+                        <div class="logo">
+                            <a href="/"><img src="../public/img/Logo.png" alt=""></a>
+                        </div>
+                    </div>
+
+                    <!-- Show the menu only if the user exists -->
+
+                    <% if(typeof userInfo !== 'undefined') { %>
+                    <div class="col-md-6 col-sm-9 col-xs-12">
+                        <div class="menu">
+                            <ul class="nav">
+                              <li><a href="/">Home</a></li>
+                              <li><a href="songs">Songs</a></li>
+                              <li><a href="artists">Artists</a></li>
+                              <li><a href="account">Account</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- We wanted to have a button for logout but we didn't achieve to revoke the Spotify API token -->
+
+                    <!-- <div class="col-md-2 col-sm-9 col-xs-12">
+                      <div class="logout">
+                        <a href="" class="btn btn-success">Logout</a>
+                      </div>
+                    </div> -->
+                    <% } %>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6" STYLE="padding-bottom: 80px">
+                        <div class="text">
+                        
+                            <h3>Bienvenue <% if(typeof userInfo !== 'undefined') { %><%= userInfo.id %><% } else { %>sur Spotify Memories <% } %></h3>
+                            <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc </h6>
+                            <% if(typeof userInfo == 'undefined') { %><a class="buttonI" href="login"><img src="../public/img/Connect.png" alt=""></a><% } %>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="header_video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/c2kAHSPK5vQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="team">
+            <div class="text">
+                <h2>Our Team</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <li data-thumb="../public/img/Gab.jpg">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="team-text">
+                                                <h3>Gabriel Gerard</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+                                                <p><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a> </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-thumb="../public/img/Nico.jpg">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="team-text">
+                                                <h3>Nicolas Copsidas</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+                                                <p><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a> </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-thumb="../public/img/Tri.jpg">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="team-text">
+                                                <h3>Tristan Deligne-Luque</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+                                                <p><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a> </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!--
+                                <li data-thumb="../public/img/sliderr4.jpg">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="team-text">
+                                                <h3>Sophie Turner</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+                                                <p><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a> </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="customer_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="customer_say">
+                            <h3>What our customers <br> have to say about us.</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                            <a class="button" href="#">Get started</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="vertical_main" id="vertical_main">
+                            <div class="verticalCarousel">
+                                <a href="#" class="vc_goDown"><i class="fa fa-fw fa-angle-down"></i></a>
+                                <a href="#" class="vc_goUp"><i class="fa fa-fw fa-angle-up"></i></a>
+                                <div class="vc_container" style="height: 285px;">
+                                    <ul class="verticalCarouselGroup vc_list" style="transform: translateY(-135px);">
+                                        <li>
+                                            <div class="vertical_text">
+                                                <img src="../public/img/vertical_text_images.jpg" alt="">
+                                                <h4>John Doe</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="vertical_text">
+                                                <img src="../public/img/vertical_text_images1.jpg" alt="">
+                                                <h4>Khalessi</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="vertical_text">
+                                                <img src="../public/img/vertical_text_images.jpg" alt="">
+                                                <h4>John Doe</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="vertical_text">
+                                                <img src="../public/img/vertical_text_images1.jpg" alt="">
+                                                <h4>Khalessi</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="vertical_text">
+                                                <img src="../public/img/vertical_text_images.jpg" alt="">
+                                                <h4>John Doe</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="vertical_text">
+                                                <img src="../public/img/vertical_text_images1.jpg" alt="">
+                                                <h4>Khalessi</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="vertical_text">
+                                                <img src="../public/img/vertical_text_images.jpg" alt="">
+                                                <h4>John Doe</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="vertical_text">
+                                                <img src="../public/img/vertical_text_images1.jpg" alt="">
+                                                <h4>Khalessi</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="vertical_text">
+                                                <img src="../public/img/vertical_text_images.jpg" alt="">
+                                                <h4>John Doe</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="vertical_text">
+                                                <img src="../public/img/vertical_text_images1.jpg" alt="">
+                                                <h4>Khalessi</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="vertical_text">
+                                                <img src="../public/img/vertical_text_images.jpg" alt="">
+                                                <h4>John Doe</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="vertical_text">
+                                                <img src="../public/img/vertical_text_images1.jpg" alt="">
+                                                <h4>Khalessi</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="vertical_text">
+                                                <img src="../public/img/vertical_text_images.jpg" alt="">
+                                                <h4>John Doe</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="vertical_text">
+                                                <img src="../public/img/vertical_text_images1.jpg" alt="">
+                                                <h4>Khalessi</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="vertical_text">
+                                                <img src="../public/img/vertical_text_images.jpg" alt="">
+                                                <h4>John Doe</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="vertical_text">
+                                                <img src="../public/img/vertical_text_images1.jpg" alt="">
+                                                <h4>Khalessi</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="vertical_text">
+                                                <img src="../public/img/vertical_text_images.jpg" alt="">
+                                                <h4>John Doe</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="vertical_text">
+                                                <img src="../public/img/vertical_text_images1.jpg" alt="">
+                                                <h4>Khalessi</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- include('partials/footer') %>
+
+
+    </div>
+    <script src="../public/js/jquery-3.1.1.min.js"></script>
+    <script src="../public/js/bootstrap.min.js"></script>
+    <script src="../public/js/owl.carousel.min.js"></script>
+    <script src="../public/js/jquery.flexslider.js"></script>
+    <script src="../public/js/jQuery.verticalCarousel.js"></script>
+    <script src="../public/js/jquery-ui.js"></script>
+    <script src="../public/js/active.js"></script>
+</body>
+
+</html>
