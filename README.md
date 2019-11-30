@@ -22,6 +22,8 @@ It has been developped with NodeJS and MongoDB, and uses 8 packages :
 For the front-end of the webapp, we used Bootstrap 4.4 and a free template that we found online, we transformed the pages in EJS template.  
 
 To launch the app, you have to initialize a mongo database, then replace the URL in the 21st line of index.js 
-(at the root of the project) with the one of your freshly created database.
+(at the root of the project) with the one of your freshly created database. After that you have to launch the database in shell.
 
-Then you just have to launch the project with "node index.js" in the project emplacement.
+Then you just have to launch the project with "node index.js" in the project emplacement, and see it in localhost:8888.
+
+Thanks you and hope you will like it!
